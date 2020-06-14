@@ -92,10 +92,20 @@ function deleteBook(el) {
 	else if(el.classList.contains('readEvent')){
 		if(el.textContent === "yes"){
 			el.textContent = "no";
+			Books.forEach(book => {
+				if((el.previousElementSibling.previousElementSibling.previousElementSibling.textContent) == book.title) {
+					book.read = "no";
+				}
+			});
 		}
 		else{
 			el.textContent = "yes";
+			Books.forEach(book => {
+				if((el.previousElementSibling.previousElementSibling.previousElementSibling.textContent) == book.title) {
+					book.read = "yes";
+				}
+			});
 		}
+		console.log(Books);
 	}
 }
-

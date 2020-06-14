@@ -15,28 +15,35 @@
 	<div class="page-header text-center">
 	  <h1>Booklist</h1>
 	</div>
-		
-	<form id="form">
-		<div class="form-group">
-			<label for="title">Title: </label>
-    		<input type="text" name="title" class="form-control" id="formTitle">
-		</div>
-		<div class="form-group">
-			<label for="author">Author: </label>
-			<input type="text" name="author" class="form-control" id="formAuthor">
-		</div>
-		<div class="form-group">
-			<label for="noOfPages">Number of Pages: </label>
-			<input type="text" name="noOfPages" class="form-control" id="formNoOfPages">
-		</div>
-		<div class="form-check">
-		  <input class="form-check-input" type="checkbox" value="" id="formRead" name="read">
-		  <label class="form-check-label" for="read">
-		    Have you read the book?
-		  </label>
-		</div>
-		<button class="btn btn-primary mt-1 mb-2" id="submit">Submit</button>
-	</form>
+	<div class="col-md-9" id="form">	
+		<form>
+			<div class="form-group row">
+				<label for="title" class="col-md-2 col-form-label">Title:</label>
+				<div class="col-md-10">
+	    			<input type="text" name="title" class="form-control" id="formTitle">
+	    		</div>
+			</div>
+			<div class="form-group row">
+				<label for="author" class="col-md-2 col-form-label">Author:</label>
+				<div class="col-md-10">
+					<input type="text" name="author" class="form-control" id="formAuthor">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="noOfPages" class="col-md-2 col-form-label">Number of Pages:</label>
+				<div class="col-md-10">
+					<input type="text" name="noOfPages" class="form-control" id="formNoOfPages">
+				</div>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" type="checkbox" value="" id="formRead" name="read">
+			  <label class="form-check-label" for="read">
+			    Have you read the book?
+			  </label>
+			</div>
+			<button class="btn btn-primary mt-1 mb-2" id="submit">Submit</button>
+		</form>
+	</div>
 
 	<div class="row row-content">
 		<div class="col-12">
