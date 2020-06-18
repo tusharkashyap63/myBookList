@@ -3,7 +3,7 @@ let Books = [
 	title: "JavaScript and jQuery",
 	author: "Jon Duckett",
 	noOfPages: 640,
-	read: "yes"
+	read: "Yes"
 }
 ];
 
@@ -47,10 +47,10 @@ subbtn.addEventListener('click', (e)=> {
 	let noOfPagesInput = document.getElementById('formNoOfPages').value;
 	let readInput;
 	if(document.getElementById('formRead').checked){
-		readInput = "yes";
+		readInput = "Yes";
 	}
 	else{
-		readInput = "no";
+		readInput = "No";
 	}
 
 	if(titleInput === '' || authorInput === '' || noOfPagesInput === ''){
@@ -90,19 +90,19 @@ function deleteBook(el) {
 		});
 	}
 	else if(el.classList.contains('readEvent')){
-		if(el.textContent === "yes"){
-			el.textContent = "no";
+		if(el.textContent === "Yes"){
+			el.textContent = "No";
 			Books.forEach(book => {
 				if((el.previousElementSibling.previousElementSibling.previousElementSibling.textContent) == book.title) {
-					book.read = "no";
+					book.read = "No";
 				}
 			});
 		}
 		else{
-			el.textContent = "yes";
+			el.textContent = "Yes";
 			Books.forEach(book => {
 				if((el.previousElementSibling.previousElementSibling.previousElementSibling.textContent) == book.title) {
-					book.read = "yes";
+					book.read = "Yes";
 				}
 			});
 		}
